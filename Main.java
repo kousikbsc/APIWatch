@@ -25,6 +25,8 @@ public class Main {
             false
         );
 
+        
+
         api1.displayDetails();
 
         System.out.println("--------------------");
@@ -38,5 +40,27 @@ public class Main {
          System.out.println("--------------------");
 
         api4.displayDetails();
-    }
+
+        System.out.println("--------------------");
+
+        System.out.println("Before update: " + api1.isEnabled());
+
+api1.setEnabled(false);
+
+System.out.println("After update: " + api1.isEnabled());
+
+ System.out.println("Original name: " + api1.getName());
+
+api1.setName("Google");
+System.out.println("After valid update: " + api1.getName());
+
+api1.setName("");
+System.out.println("After empty update: " + api1.getName());
+
+api1.setName(null);
+System.out.println("After null update: " + api1.getName());
+
+api1.setName("  ");
+System.out.println("After whitespace update: " + api1.getName());   
+}
 }
